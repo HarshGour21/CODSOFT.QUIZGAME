@@ -1,0 +1,42 @@
+print("LET'S PLAY QUIZ GAME ON THE TOPIC IPL")
+questions = ("1.Which player became the first to cross 700 fours in the IPL during the 2022 season?",
+                       "2.Which player bowled the quickest delivery in IPL 2022?",
+                       "3.Who is the youngest uncapped Indian bowler to take five-wicket haul in IPL?",
+                       "4.Which player scored the most fifties in IPL 2022?",
+                       "5.Which Indian uncapped batter had the highest batting strike rate in 2022")
+
+options = (("a. Virat Kohli","b. Rohit Sharma","c. Shikhar Dhawan","d. David Warner"),
+                   ("a. Lockie Ferguson","b. Umran Malik","c. Alzarri Joseph","d. Anrich Nortje"),
+                   ("a. Jaydev Unadkat","b. Alzarri Joseph","c. Umran Malik","d. Ishant Sharma"),
+                   ("a. Jos Buttler","b. David Warner","c. KL Rahul","d. Shubman Gill"),
+                   ("a. Priyam Garg","b. Abhinav Manohar Sadarangani ","c. Tilak Verma","d. Jitesh Sharma"))
+answers = ("c", "a", "c", "b", "d")
+guesses = []
+score=0
+question_number=0
+for question in questions:
+    print(question)
+    for option in options[question_number]:
+        print(option)
+    guess = input("Enter (a,b,c,d): ")
+    if guess == answers[question_number]:
+        score += 1
+        print("YOU GAVE CORRECT ANSWER!")
+    else:
+        print("YOU GAVE INCORRECT ANSWER!")
+        print(f"{answers[question_number]} IS THE CORRECT ANSWER")
+    question_number+= 1
+print("THE CORRECT OPTION IS: ", end="")
+for answer in answers:
+    print(answer, end=" ")
+print()
+print("YOU SCORED",score,"OUT OF 5")
+if score==5:
+    print("YOU DID GREAT JOB,EXCELLENT")
+else:
+    print("YOU NEED IMPROVEMENT")
+play=input("CAN WE PLAY AGAIN?= ")
+if play=="YES":
+    print("LETS ROCK")
+else:
+    print("OKAY HAVE A WONDERFUL DAY!")
